@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+  }
+  .cart-container {
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+  }
+  .product-info {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .product-info img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-category {
+    font-size: 2;
+    width: 200px;
+    color: #888;
+  }
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .quantity-controls button {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .quantity-controls button :hover{
+    background-color: #888;
+  }
+  .remove-link {
+    cursor: pointer;
+  }
+  .link-style{
+    list-style-type: none;
+    color: blue;
+    margin-left: 10px;
+  }
+  .voucher-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .checkout-section input {
+    padding: 5px;
+    width: 150px;
+    font-size: 14px;
+    
+  }
+  .checkout-section {
+    text-align: right;
+    margin-top: 20px;
+  }
+  .checkout-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .checkout-button:hover {
+    background-color: #e64a19;
+  }
+
+  .apply-button{
+    background-color: white;
+    color: gray;
+    padding: 3px 15px;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow:0px 2px 4px #888;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .apply-button:hover {
+    background-color: whitesmoke;
+  }
+  
+  .checkout-final{
+    display: flex;
+    align-items: center; 
+    text-align: right; 
+    justify-content: flex-end;
+    margin-top: 10px;
+  }

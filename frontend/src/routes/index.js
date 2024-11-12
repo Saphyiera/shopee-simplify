@@ -4,7 +4,7 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import ForgotPassword from '../pages/ForgotPassword'
 import SignUp from '../pages/SignUp'
-
+import Cart from '../pages/Cart.js'
 
 
 const router = createBrowserRouter([
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path : "sign-up",
                 element : <SignUp/>
-            }
+            },
             // {
             //     path : "product-category",
             //     element : <CategoryProduct/>
@@ -36,10 +36,10 @@ const router = createBrowserRouter([
             //     path : "product/:id",
             //     element : <ProductDetails/>
             // },
-            // {
-            //     path : 'cart',
-            //     element : <Cart/>
-            // },
+            {
+                path : "cart",
+                element : <Cart/>
+            }
             // {
             //     path : "search",
             //     element : <SearchProduct/>
