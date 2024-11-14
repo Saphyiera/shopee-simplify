@@ -71,7 +71,7 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {cartItems.map((shop, index) => (
+            { cartItems.map((shop, index) => (
               <React.Fragment key={index}>
                 {/* Display the shop name once for each group */}
                 <tr>

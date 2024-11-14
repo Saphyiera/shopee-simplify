@@ -5,6 +5,7 @@ import Login from '../pages/Login'
 import ForgotPassword from '../pages/ForgotPassword'
 import SignUp from '../pages/SignUp'
 import Cart from '../pages/Cart.js'
+import ProductDetail from '../pages/ProductDetails.js'
 
 
 const router = createBrowserRouter([
