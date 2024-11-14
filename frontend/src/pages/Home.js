@@ -225,7 +225,7 @@ const Home = () => {
       </div>
       {/* hết phần gợi ý mua sắm */}
 
-      <div className="overflow-hidden relative mt-4">
+      <div className="overflow-hidden relative mt-4 mb-10">
         <img
           src={banners[currentBanner]}
           className="mt-3 h-60 w-full object-cover transition-opacity duration-1000 ease-in-out"
