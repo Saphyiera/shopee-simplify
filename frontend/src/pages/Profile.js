@@ -15,12 +15,12 @@ const Profile = () => {
 
               <div class="mb-4">
                   <label class="block text-gray-600 mb-1">Tên</label>
-                  <input type="text" value="--Tên người dùng--" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"/>
+                  <input type="text" placeholder="--Tên người dùng--" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-red-500"/>
               </div>
 
               <div class="mb-4">
                   <label class="block text-gray-600 mb-1">Địa chỉ</label>
-                  <input type="text" value="--Địa chỉ người dùng--" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"/>
+                  <input type="text" placeholder="--Địa chỉ người dùng--" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-red-500"/>
               </div>
 
               <div class="mb-4">
@@ -43,15 +43,15 @@ const Profile = () => {
                   <label class="block text-gray-600 mb-1">Giới tính</label>
                   <div class="flex items-center space-x-4">
                       <label class="flex items-center">
-                          <input type="radio" name="gender" checked class="text-orange-500 focus:ring-orange-500"/>
+                          <input type="radio" name="gender" class="text-orange-500 focus:ring-red-500"/>
                           <span class="ml-2">Nam</span>
                       </label>
                       <label class="flex items-center">
-                          <input type="radio" name="gender" class="text-orange-500 focus:ring-orange-500"/>
+                          <input type="radio" name="gender" class="text-orange-500 focus:ring-red-500"/>
                           <span class="ml-2">Nữ</span>
                       </label>
                       <label class="flex items-center">
-                          <input type="radio" name="gender" class="text-orange-500 focus:ring-orange-500"/>
+                          <input type="radio" name="gender" class="text-orange-500 focus:ring-red-500"/>
                           <span class="ml-2">Khác</span>
                       </label>
                   </div>
