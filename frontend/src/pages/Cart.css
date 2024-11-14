@@ -1,124 +1,267 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.cart-container {
+  width: 90%;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.product-info img {
+  max-width: 80px;
+  max-height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-category {
+  font-size: 2;
+  width: 200px;
+  color: #888;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.quantity-controls button:hover {
+  background-color: #888;
+}
+
+.remove-link {
+  cursor: pointer;
+}
+
+.link-style {
+  list-style-type: none;
+  color: blue;
+  margin-left: 10px;
+}
+
+.shop-separator-row td {
+  height: 10px;
+  background-color: #f5f5f5;
+  border: none;
+}
+
+.voucher-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.checkout-section input {
+  padding: 5px;
+  width: 150px;
+  font-size: 14px;
+}
+
+.checkout-section {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.checkout-button {
+  background-color: #DC2626;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout-button:hover {
+  background-color: #b10b0b;
+}
+
+.apply-button {
+  background-color: white;
+  color: gray;
+  padding: 3px 15px;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0px 2px 4px #888;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: whitesmoke;
+}
+
+.checkout-final {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
   .cart-container {
-    width: 90%;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th,
-  td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-  }
-  th {
-    background-color: #f0f0f0;
-    color: #333;
-    font-weight: bold;
-  }
-  .product-info {
-    display: flex;
-    align-items: center;
-    text-align: left;
-  }
-  .product-info img {
-    width: 50px;
-    margin-right: 10px;
-  }
-  .product-details {
-    display: flex;
-    flex-direction: column;
-  }
-  .product-category {
-    font-size: 2;
-    width: 200px;
-    color: #888;
-  }
-  .quantity-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .quantity-controls button {
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  .quantity-controls button :hover{
-    background-color: #888;
-  }
-  .remove-link {
-    cursor: pointer;
-  }
-  .link-style{
-    list-style-type: none;
-    color: blue;
-    margin-left: 10px;
-  }
-  .voucher-section {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .checkout-section input {
-    padding: 5px;
-    width: 150px;
-    font-size: 14px;
-    
-  }
-  .checkout-section {
-    text-align: right;
-    margin-top: 20px;
-  }
-  .checkout-button {
-    background-color: #ff5722;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .checkout-button:hover {
-    background-color: #e64a19;
+      width: 95%;
   }
 
-  .apply-button{
-    background-color: white;
-    color: gray;
-    padding: 3px 15px;
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow:0px 2px 4px #888;
-    margin-left: 10px;
-    cursor: pointer;
+  table {
+      font-size: 14px;
   }
-  .apply-button:hover {
-    background-color: whitesmoke;
+
+  .product-info {
+      flex-direction: column;
+      align-items: flex-start;
   }
-  
-  .checkout-final{
-    display: flex;
-    align-items: center; 
-    text-align: right; 
-    justify-content: flex-end;
-    margin-top: 10px;
+
+  .product-info img {
+      max-width: 70px;
+      max-height: 90px;
+      object-fit: cover;
   }
+
+  .product-category {
+      width: 100%;
+  }
+
+  .quantity-controls {
+      justify-content: space-between;
+  }
+
+  .checkout-section {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .checkout-button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+      font-size: 12px;
+  }
+
+  th, td {
+      padding: 10px;
+  }
+
+  .product-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .product-info img {
+      max-width: 60px;
+      max-height: 80px;
+      object-fit: cover;
+  }
+
+  .checkout-section {
+      width: 100%;
+      text-align: center;
+  }
+
+  .voucher-section {
+      width: 100%;
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  .apply-button {
+      width: 100%;
+  }
+
+  .checkout-button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container {
+      padding: 10px;
+  }
+
+  th, td {
+      padding: 8px;
+      font-size: 10px;
+  }
+
+  .product-info img {
+      max-width: 50px;
+      max-height: 60px;
+      object-fit: cover;
+  }
+
+  .product-category {
+      width: 100%;
+  }
+
+  .quantity-controls {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .checkout-button, .apply-button {
+      width: 100%;
+      font-size: 14px;
+      padding: 12px;
+  }
+
+  .checkout-final {
+      flex-direction: column;
+      align-items: center;
+  }
+}
