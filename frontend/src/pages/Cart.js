@@ -80,9 +80,15 @@ function Cart() {
             </tr>
           </thead>
           <tbody>
+<<<<<<< HEAD
             {cartItems.map((shop, shopIndex) => (
               <React.Fragment key={shopIndex}>
                 {shopIndex > 0 && (
+=======
+            { cartItems.map((shop, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && (
+>>>>>>> aaad5715463d490d6afe93bdc7dfac1f475d0acb
                   <tr className="shop-separator-row">
                     <td colSpan="6"></td>
                   </tr>

@@ -11,6 +11,59 @@ import topproduct3 from "../assest/products/trimmers/Ambrane AGK-11 Trimmer 60 m
 
 
 const Home = () => {
+  // các sản phẩm gợi ý
+  const products = [
+    {
+      name: "Mặt hàng 1",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 2",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 3",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 4",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 5",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 6",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+
+  ];
+
   const banners = [label1, label2, label3, label4, label5];
 
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -24,14 +77,14 @@ const Home = () => {
   }, [banners.length]);
 
   return (
-    <div className="ml-60 mr-60">
+    <div className="w-10/12 mx-auto">
       <div className="text-lg font-semibold flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mr-4">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
         <h1>Danh mục</h1>
       </div>
-      <div className="bg-red-400 p-4 h-60 rounded-md flex flex-col items-center justify-center transition duration-200 border border-gray-500 mt-4 mr-">
+      <div className="bg-red-500 p-4 h-60 rounded-md flex flex-col items-center justify-center transition duration-200 border border-gray-500 mt-4 mr-">
         <div className="mt-1 grid grid-cols-7 gap-8 ">
           <div className="bg-gray-200 p-4 w-24 h-24 rounded-md text-center flex flex-col items-center hover:bg-gray-300">
             <p className="text-xs font-semibold">Airpods</p>
@@ -83,7 +136,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-1 grid grid-cols-7 gap-8">
+        <div className="mt-4 grid grid-cols-7 gap-8">
           <div className="flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
@@ -135,27 +188,46 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-2xl font-semibold text-center mt-3 mb-3">Các sản phẩm nổi bật</div>
+      <div className="text-2xl font-semibold text-center mt-10 mb-3">Các sản phẩm nổi bật</div>
 
-      <div className="grid grid-cols-3 gap-x-3 bg-red-400 rounded-lg">
+      <div className="grid grid-cols-3 gap-x-3 bg-red-500 rounded-lg">
         <div className="mt-3 ml-3 mr-3 mb-3">
           <img src={topproduct1} className="rounded-lg object-cover w-full"/>
-          <h1 className="text-center font-medium text-1xl">Airpods bán chạy nhất phân khúc</h1>
+          <h1 className="text-center font-medium text-1xl mt-2 bg-gray-300 rounded-md w-2/3 mx-auto">Airpods bán chạy nhất phân khúc</h1>
         </div>
         <div className="mt-3 ml-3 mr-3 mb-3">
           <img src={topproduct2} className="rounded-lg"/>
-          <h1 className="text-center font-medium text-1xl">Chuột máy tính bán chạy nhất phân khúc</h1>
+          <h1 className="text-center font-medium text-1xl mt-2 bg-gray-300 rounded-md w-2/3 mx-auto">Chuột máy tính bán chạy nhất phân khúc</h1>
         </div>
         <div className="mt-3 ml-3 mr-3 mb-3">
           <img src={topproduct3} className="rounded-lg"/>
-          <h1 className="text-center font-medium text-1xl">Máy cạo râu bán chạy nhất phân khúc</h1>
+          <h1 className="text-center font-medium text-1xl mt-2 bg-gray-300 rounded-md w-2/3 mx-auto">Máy cạo râu bán chạy nhất phân khúc</h1>
         </div>
       </div>
 
-      <div className="overflow-hidden relative mt-4">
+      {/* phần gợi ý mua sắm */}
+      <div className="text-2xl font-semibold text-center mt-10 underline">Gợi ý mua sắm</div>
+        <div className="container mx-auto px-4 py-8 bg">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {products.map((product, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-4">
+              <img src={product.image} alt="Product Image" className="w-full h-40 object-cover rounded-lg" />
+              <h3 className="text-gray-800 font-semibold mt-2 text-sm">{product.name}</h3>
+              <p className="text-red-500 font-bold mt-1">{product.price}</p>
+              <p className="text-gray-500 line-through text-xs">{product.originalPrice}</p>
+              <div className="flex justify-between">
+                <p className="text-xs text-green-500">{product.discount}</p>
+                <p className="text-xs text-gray-500 text-right">{product.numsold}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* hết phần gợi ý mua sắm */}
+
+      <div className="overflow-hidden relative mt-4 mb-10">
         <img
           src={banners[currentBanner]}
-          alt="Banner 1"
           className="mt-3 h-60 w-full object-cover transition-opacity duration-1000 ease-in-out"
         />
       </div>
