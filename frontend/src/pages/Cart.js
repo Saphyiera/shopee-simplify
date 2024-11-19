@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Cart.css';
-import product3 from "../assest/products/mobile/realme 9 Pro 5G (Midnight Black, 128 GB) (6 GB RAM) 2.webp"
-import product1 from "../assest/products/TV/LG 123 cm (49 inch) Ultra HD (4K) LED Smart WebOS TV (49UK7500PTA) 4.webp"
-import product2 from "../assest/products/speakers/boAt Rugby Plus 2.webp"
+import product3 from "../assest/products/mobile/realme 9 Pro 5G (Midnight Black, 128 GB) (6 GB RAM) 2.webp";
+import product1 from "../assest/products/TV/LG 123 cm (49 inch) Ultra HD (4K) LED Smart WebOS TV (49UK7500PTA) 4.webp";
+import product2 from "../assest/products/speakers/boAt Rugby Plus 2.webp";
+import topproduct3 from "../assest/products/trimmers/Ambrane AGK-11 Trimmer 60 min Runtime 18 Length Settings (Black) 2.webp";
 
 function Cart() {
   const initialCartItems = [
@@ -39,6 +40,57 @@ function Cart() {
     },
   ];
 
+  const products = [
+    {
+      name: "Mặt hàng 1",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 2",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 3",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 4",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 5",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+    {
+      name: "Mặt hàng 6",
+      price: "giá khuyến mãi",
+      originalPrice: "giá gốc",
+      discount: "Giảm x%",
+      numsold: "Đã bán: ?",
+      image: topproduct3,
+    },
+  ];
+
   const [cartItems, setCartItems] = useState(initialCartItems);
 
   const calculateTotalPrice = () => {
@@ -67,6 +119,7 @@ function Cart() {
 
   return (
     <div>
+      {/* Giỏ hàng */}
       <div className="cart-container">
         <table>
           <thead>
@@ -97,7 +150,7 @@ function Cart() {
                   <tr key={productIndex}>
                     <td><input type="checkbox" /></td>
                     <td>
-                      <div className="product-info">
+                      <div className="product-info" style={{display:'flex'}}>
                         <img src={product.image} alt={product.name} />
                         <div className="product-details">
                           <span>{product.name}</span>
@@ -159,6 +212,27 @@ function Cart() {
               <span style={{ color: '#DC2626' }}>₫{totalPrice.toLocaleString()}</span>
             </h3>
             <button className="checkout-button" style={{ marginLeft: '10px' }}>Mua Hàng</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Phần "Có thể bạn cũng thích" */}
+      <div className="related-products-container">
+        <div className="text-2xl font-semibold text-center mt-10 underline">CÓ THỂ BẠN CŨNG THÍCH</div>
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {products.map((product, index) => (
+              <div key={index} className="bg-white shadow-lg rounded-lg p-4">
+                <img src={product.image} alt="Product Image" className="w-full h-40 object-cover rounded-lg" />
+                <h3 className="text-gray-800 font-semibold mt-2 text-sm">{product.name}</h3>
+                <p className="text-red-500 font-bold mt-1">{product.price}</p>
+                <p className="text-gray-500 line-through text-xs">{product.originalPrice}</p>
+                <div className="flex justify-between">
+                  <p className="text-xs text-green-500">{product.discount}</p>
+                  <p className="text-xs text-gray-500 text-right">{product.numsold}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
