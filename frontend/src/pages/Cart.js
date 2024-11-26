@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Cart.css';
+import { Link} from 'react-router-dom';
 import product3 from "../assest/products/mobile/realme 9 Pro 5G (Midnight Black, 128 GB) (6 GB RAM) 2.webp";
 import product1 from "../assest/products/TV/LG 123 cm (49 inch) Ultra HD (4K) LED Smart WebOS TV (49UK7500PTA) 4.webp";
 import product2 from "../assest/products/speakers/boAt Rugby Plus 2.webp";
@@ -211,29 +212,31 @@ function Cart() {
               Tổng thanh toán ({cartItems.reduce((acc, shop) => acc + shop.products.length, 0)} sản phẩm):
               <span style={{ color: '#DC2626' }}>₫{totalPrice.toLocaleString()}</span>
             </h3>
-            <button className="checkout-button" style={{ marginLeft: '10px' }}>Mua Hàng</button>
+            <Link to = {'/checkout'}>
+              <button className="checkout-button" style={{ marginLeft: '10px' }}>Mua Hàng</button>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Phần "Có thể bạn cũng thích" */}
-      <div className="related-products-container">
-        <div className="text-2xl font-semibold text-center mt-10 underline">CÓ THỂ BẠN CŨNG THÍCH</div>
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {products.map((product, index) => (
-              <div key={index} className="bg-white shadow-lg rounded-lg p-4">
-                <img src={product.image} alt="Product Image" className="w-full h-40 object-cover rounded-lg" />
-                <h3 className="text-gray-800 font-semibold mt-2 text-sm">{product.name}</h3>
-                <p className="text-red-500 font-bold mt-1">{product.price}</p>
-                <p className="text-gray-500 line-through text-xs">{product.originalPrice}</p>
-                <div className="flex justify-between">
-                  <p className="text-xs text-green-500">{product.discount}</p>
-                  <p className="text-xs text-gray-500 text-right">{product.numsold}</p>
-                </div>
+      <div className="text-2xl font-semibold text-center mt-10 underline">Gợi ý mua sắm</div>
+        <div className="container mx-auto px-4 py-8 bg">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {products.map((product, index) => (
+            <Link to = {'/product'}>
+            <div key={index} className="bg-white shadow-lg rounded-lg p-4">
+              <img src={product.image} alt="Product Image" className="w-full h-40 object-cover rounded-lg" />
+              <h3 className="text-gray-800 font-semibold mt-2 text-sm">{product.name}</h3>
+              <p className="text-red-500 font-bold mt-1">{product.price}</p>
+              <p className="text-gray-500 line-through text-xs">{product.originalPrice}</p>
+              <div className="flex justify-between">
+                <p className="text-xs text-green-500">{product.discount}</p>
+                <p className="text-xs text-gray-500 text-right">{product.numsold}</p>
               </div>
-            ))}
-          </div>
+            </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

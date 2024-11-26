@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .checkout-container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .address-section {
+    margin-bottom: 20px;
+    border-bottom: 10px solid #f5f5f5;
+    padding-bottom: 15px;
+  }
+  
+  .address-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .address-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .address-form .form-group {
+    flex: 1 1 45%; /* Chiều rộng 45% mỗi nhóm input */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .address-form label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .address-form input {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .address-form input:focus {
+    border-color: #DC2626;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .address-form input::placeholder {
+    color: #aaa;
+    font-size: 13px;
+  }
+
+  .shipping-section, .payment-method, .total-section {
+    margin-bottom: 20px;
+    border-bottom: 10px solid #f5f5f5;
+    padding-bottom: 15px;
+  }
+  
+  .shipping-section{
+    text-align: end;
+  }
+  
+  .voucher-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    text-align: right;
+  }
+  
+  .shopee-voucher{
+    margin-bottom: 20px;
+    border-bottom: 10px solid #f5f5f5;
+    padding-bottom: 15px;
+    text-align: right;
+  }
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    padding: auto;
+  }
+  
+  .product-table th, .product-table td {
+    padding: auto;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .product-image {
+    max-width: 80px;
+    max-height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .product-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .price1, .quantity, .total {
+    color: #DC2626;
+    font-weight: bold;
+  }
+
+  
+  .insurance {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .voucher-section button, .shopee-voucher button, .order-button {
+    background-color: #DC2626;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .shipping-section span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .payment-method {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-options button {
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-options .selected {
+    background-color: #DC2626;
+    color: #fff;
+  }
+  
+  .total-section p, .total-section h3 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0;
+    margin-top: 10px;
+  }
+  
+  .total-section h3 span {
+    color: #DC2626;
+    font-size: 20px;
+  }
+  
+  .order-button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

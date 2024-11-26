@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import label1 from "../assest/banner/img1.webp"
 import label2 from "../assest/banner/img2.webp"
 import label3 from "../assest/banner/img3.jpg"
@@ -210,6 +211,7 @@ const Home = () => {
         <div className="container mx-auto px-4 py-8 bg">
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {products.map((product, index) => (
+            <Link to = {'/product'}>
             <div key={index} className="bg-white shadow-lg rounded-lg p-4">
               <img src={product.image} alt="Product Image" className="w-full h-40 object-cover rounded-lg" />
               <h3 className="text-gray-800 font-semibold mt-2 text-sm">{product.name}</h3>
@@ -220,6 +222,7 @@ const Home = () => {
                 <p className="text-xs text-gray-500 text-right">{product.numsold}</p>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
